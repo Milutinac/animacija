@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Animacija</title>
+    <style>
+        body{
+            background-color: #050210;
+            }
+        #circle-1::before{
+            content: '';
+            margin: 50px auto;
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(to bottom,#fb5dad, #55fb9f, #b97aff);
+            border-radius: 50%;
+            animation-name: animacija-1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            display: inline-block;
+            position: absolute;
+            filter: blur(2px);
+        
+            
+            
+
+            
+            }
+        #circle-2::after{
+            content: '';
+            margin: 50px auto;   
+            height: 0px;
+            width: 0px;
+            z-index: 1;
+            background: #050210;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: 195px;
+            left: 195px;
+            animation-name: animacija-2;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform-origin: 50% 50% 0%; 
+            white-space: nowrap;
+            filter: brightness(250%)
+            
+            
+        }
+        
+        #circle-3{
+            margin: 50px auto;   
+            height: 340px;
+            width: 340px;
+            background: #050210;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            }
+            
+         @keyframes animacija-1 {
+             from{
+               transform: rotate(0deg);
+               
+            }
+             to{
+                 transform: rotate(360deg);
+                 
+            }
+        }
+        @keyframes animacija-2 {
+            from{
+                width: 0px;
+                height: 0px;
+                
+
+                
+                
+            }
+            to{
+                width: 340px;
+                height: 340px;
+                transform: translate(-160px,-160px);
+                
+            }
+            
+        }    
+         
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <div id="circle-1"></div>
+        <div id="circle-2"></div>
+        <div id="circle-3"></div>
+
+    </div>
+        
+    
+</body>
+</html>
